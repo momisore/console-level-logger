@@ -1,0 +1,26 @@
+{
+  "name": "console-level-logger",
+  "version": "1.0.0",
+  "description": "Simple Nodejs logger that allows for setting log levels",
+  "main": "logger.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/momisore/console-level-logger.git"
+  },
+  "keywords": [
+    "nodejs",
+    "logger",
+    "verbosity",
+    "log",
+    "level"
+  ],
+  "author": "Matthias Omisore",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/momisore/console-level-logger/issues"
+  },
+  "homepage": "https://github.com/momisore/console-level-logger#readme"
+}
