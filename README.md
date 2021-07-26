@@ -18,7 +18,7 @@ The module currently supports 4 different log levels; INFO, WARN, DEBUG and ERRO
 **INFO:**  logs all info, warning, debug and error messages
 
 ## Install
-npm install console-level-logger
+``` npm install console-level-logger ```
 
 
 ## Usage
