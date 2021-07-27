@@ -31,7 +31,7 @@ ___
 ## Usage
 ___
 ```
-const Logger = require("./simple-nodejs-logger")
+const Logger = require("./console-level-logger")
 
 var logger = new Logger()
 
