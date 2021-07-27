@@ -20,7 +20,7 @@ ___
 
 **`WARN:`** Logs error, debug and warning messages
 
-**`INFO:`**  logs all info, warning, debug and error messages
+**`INFO:`**  logs all info, warning, debug and error messages. This is used as the default  whenever a log level is not set.
 
 
 ## Install
@@ -42,6 +42,12 @@ logger.info("this is an INFO message") // ignored
 logger.warn("this is a WARNING message")  // ignored
 logger.debug("this is a DEBUG message") // logged
 logger.error("this is an ERROR message") // logged
+
+// pass multiple arguments and using interpolations
+
+logger.error("this is an ERROR message with multiple arguments", `${1==1}`, 'arg3')
+let newVal = "newValue"
+logger.error("this is a msg to log", "log2", `${newVal}` )
 
 // Note that INFO is the default level, it is used if no levels are set
 
