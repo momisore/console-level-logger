@@ -60,36 +60,36 @@ class Logger{
     }
 
   
-    error(msg){
+    error(...msg){
         // error messages
         if(this.LOG_LEVEL.includes("ERROR")){
-            console.error(msg)
+            console.error(...msg)
         }   
     }
-    debug(msg){
+    debug(...msg){
         // debug messages
         if(this.LOG_LEVEL.includes("DEBUG")){
-            console.debug(msg)
+            console.debug(...msg)
         }  
     }
 
-    warn(msg){
+    warn(...msg){
         // log messages
         if(this.LOG_LEVEL.includes("WARN")){
-            console.warn(msg)
+            console.warn(...msg)
         }
     }
 
-    info(msg){
+    info(...msg){
         // info messages
         if(this.LOG_LEVEL.includes("INFO")){
-            console.info(msg)
+            console.info(...msg)
         }  
     }
-    log(msg){
+    log(...msg){
         // log messages
         if(this.LOG_LEVEL.includes("LOG")){
-            console.log(msg)
+            console.log(...msg)
         }  
     }
 

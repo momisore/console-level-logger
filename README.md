@@ -2,26 +2,34 @@
 
 ## Simple logger for Nodejs
 
-A simple lightweight logger that provides a wrapper for inbuilt NodeJS Console Module and provides a means of setting log levels to constrol logging verbosity.
-The logger supports common logging methods that are exposed by the Console module, including INFO, WARN, DEBUG, ERROR. 
+A simple lightweight logger that serves as a wrapper for the inbuilt NodeJS `Console` Module. It provides a means of setting log levels to control logging verbosity.
+ 
 
-## Feature
+## Features
+___
 
-The module currently supports 4 different log levels; INFO, WARN, DEBUG and ERROR).  Selected log level determines what gets logged to the console. For example, setting the the log level as error means that all other log types are ignored, including debug, warning and info.
+The module currently supports the 4 common log levels; `INFO/LOG`, `WARN`, `DEBUG` and `ERROR`.  Selected log level determines what gets logged to the console. For example, setting the the log level as `ERROR` means that all other log types are ignored, including debug, warning and info.
 
-**Error:** Logs only error messages
 
-**DEBUG:** Logs errors and debug messages.
+### Log Levels with their respective verbosities
+___
 
-**WARN:** Logs error, debug and warning messages
+**`ERROR:`** Logs only error messages
 
-**INFO:**  logs all info, warning, debug and error messages
+**`DEBUG:`** Logs errors and debug messages.
+
+**`WARN:`** Logs error, debug and warning messages
+
+**`INFO:`**  logs all info, warning, debug and error messages
+
 
 ## Install
+___
 ``` npm install console-level-logger ```
 
 
 ## Usage
+___
 ```
 const Logger = require("./simple-nodejs-logger")
 
@@ -38,4 +46,33 @@ logger.error("this is an ERROR message") // logged
 // Note that INFO is the default level, it is used if no levels are set
 
 ```
+
+Pass to another imported function
+```
+
+// in the parent module
+
+anotherModule = require('another-module')
+anotherModule.loggingModule(logger)
+
+// in another-module.js
+
+module.exports = {
+    loggingModule: function module2(logger){
+        ....
+        logger.error("log error")
+        ....
+    }
+    ...
+    }
+
+```
+
+Like the inbuilt `Console` module, `console-level-logger` accepts variable arguments:
+
+```
+logger.info("arg1", "arg2", "arg3")
+```
+
+  
 
