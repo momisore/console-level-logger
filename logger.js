@@ -33,7 +33,7 @@ class Logger{
                 switch(strLevel.toLowerCase()){
                     case 'info':
                         this.LOG_LEVEL = ["LOG", "INFO", "WARN", "DEBUG", "ERROR"]
-                        // break;
+                        break;
                     case 'warn':
                         this.LOG_LEVEL = ["WARN", "DEBUG", "ERROR"]
                         break;
