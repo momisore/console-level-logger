@@ -20,7 +20,7 @@ class Logger{
     
     constructor(){
         // constructor
-        this.LOG_LEVEL = ["LOG", "INFO", "WARN", "DEBUG", "ERROR"]
+        this.LOG_LEVEL = ["INFO", "WARN", "DEBUG", "ERROR"]
     }
 
     setLevel(level){
